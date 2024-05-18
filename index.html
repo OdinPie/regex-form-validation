@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation </title>
+<!--    comment a line shortcut "Crt+/"-->
+<!--    add stylesheet link here-->
+    <link rel="stylesheet" href="style.css">
+<!--    add srouce file for logo from fontawesome site-->
+    <script src="https://kit.fontawesome.com/32f79ba02b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <form method="POST" action="process.php" onsubmit="process()">
+     <!-- <i class="fas fa-paper-plane"></i>
+      <i class="fa-solid fa-hand-holding-medical"></i>
+    <i class="fa-brands fa-google"></i> -->
+     <i class="fa-solid fa-hands-holding-child"></i>
+<!--add name field-->
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" name="name" id="name" onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+<!--add Phone no field-->
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="123 456 7890" name="phone" id="phone" onkeyup="chkphoneno()">
+        <span id="phone-error"></span>
+      </div>
+<!--add Email id field-->
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" onkeyup="chkemail()">
+        <span id="email-error"></span>
+      </div>   
+<!--add message field -->
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message" id="message" name="message"></textarea>
+        <span id="message-error"></span>
+      </div>
+<!--add submit button-->
+    <button name="submit">Submit</button>
+    <span id="submit-error"></span>
+   
+  </form>
+  </div>
+   <script src="main.js">
+    </script>
+</body>
+</html>
